@@ -1,0 +1,24 @@
+
+.profileImg{ 
+  border-radius:60%;
+  border:.2rem solid var(--bs-dark) !important;  
+
+}
+.profileImgCover {
+  width:50%;
+  margin:0 auto;
+  text-align: center;
+} 
+.bio {
+  border:1px solid white;
+  border-radius:10%;
+  background-color:var(--theme-foreground-color)
+}
+.bio  ul{
+  list-style: none;
+  font-size:var(--font-600)
+}
+
+
+
+/* create a class for common padding patterns */

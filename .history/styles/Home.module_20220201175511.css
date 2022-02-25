@@ -1,0 +1,10 @@
+
+.profileImg{ 
+  border-radius:60%;
+  border:.2rem solid black !important;  
+
+}
+.profileImgCover {
+  width:50%;
+  margin:0 auto;
+}

@@ -1,0 +1,48 @@
+html,
+body {
+  padding:0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--theme-base-clr) !important;
+  color:white !important;
+  height:200rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+:root{
+  --font-400:1rem;
+  --font-600:1.5rem;
+  --font-500:1.25rem;
+  --font-xl:5rem;
+  --theme-base-clr:hsl(253, 25%, 21%);
+  --theme-foreground-clr:hsl(253, 25%, 25%)
+}
+
+.test{
+  animation-iteration-count:1;
+  transition-duration: 2s;
+  animation-name:fadeDown;
+  animation-duration:1s;
+}
+
+
+
+@keyframes fadeDown {
+ 0%   {
+   transform: translateX(-2rem);
+   opacity:0.5
+ } 
+ 100% {
+   transform:translateX(0);
+   opacity:1
+ }
+}

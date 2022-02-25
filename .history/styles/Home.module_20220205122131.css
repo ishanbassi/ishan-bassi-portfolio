@@ -1,0 +1,14 @@
+
+.profileImg{ 
+  border-radius:60%;
+  border:.2rem solid var(--bs-dark) !important;  
+
+}
+.profileImgCover {
+  width:50%;
+  margin:0 auto;
+  text-align: center;
+} 
+.bio{
+  text-align: left;
+}

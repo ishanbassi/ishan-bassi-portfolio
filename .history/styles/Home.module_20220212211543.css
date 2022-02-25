@@ -1,0 +1,17 @@
+
+.profileImg{ 
+  border-radius:60%;
+  border:.2rem solid var(--bs-dark) !important;  
+
+}
+.profileImgCover {
+  width:50%;
+  margin:0 auto;
+  text-align: center;
+} 
+.aboutMe{
+  margin-top:10rem;
+  font-size:var(--font-500);
+  border:1px solid white; 
+  line-height:1rem;
+}
