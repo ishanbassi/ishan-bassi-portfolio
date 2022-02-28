@@ -1,0 +1,83 @@
+
+.profileImg{ 
+  border-radius:60%;
+  border:.2rem solid var(--bs-dark) !important;  
+
+}
+.profileImgCover {
+  width:50%;
+  margin:0 auto;
+  text-align: center;
+} 
+.baseShadow {
+  box-shadow:
+  -2px 0 10px 2px hsl(253, 25%, 50%),
+  2px 0 10px 2px hsl(253, 25%, 50%)  
+  ;
+  
+  background-color:var(--theme-foreground-clr);
+  transition-duration:.5s
+}
+.baseShadow:hover {
+  box-shadow:
+  -2px 0 10px 2px hsl(253, 25%, 60%),
+  2px 0 10px 2px hsl(253, 25%, 60%)  
+  ;
+  transition-duration:.5s;
+}
+.bio > ul{
+  
+  font-size:var(--font-400);
+  text-align:left;
+  padding:1.5rem;
+}
+.bio > ul > li {
+  margin-bottom:1rem;
+  display: flex;
+  justify-content: center;
+  align-items:center
+  
+}
+.bioHeads {
+  display: inline-block;
+  width:40%;
+}
+.bioAns {
+  display: inline-block;
+  width:60%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.frameworkIcons::after {
+  content:" ";
+  margin:.5rem 0 0 .5rem;
+  display:inline-block;
+  width: var(--font-400);
+  height: var(--font-400);
+  mask-repeat:no-repeat;  
+  mask-size:cover
+  
+  
+}
+#reactIcon::after{
+  background-color:#61dafb;
+  mask-image:url(../public/react-logo.svg)
+}
+#nextIcon::after{
+  background-color:white;
+  mask-image:url(../public/nextjs-logo.svg)
+}
+#djangoIcon::after{
+  background-color:white; 
+  mask-image:url(../public/django-logo.svg)
+}
+
+.bioPara {
+  font-size:var(--font-400);
+  
+}
+.skillsImg{ 
+  position:relative;
+  height:15rem;
+  
+}
