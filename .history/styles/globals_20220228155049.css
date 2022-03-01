@@ -22,7 +22,7 @@ a {
   --font-400:1rem;
   --font-600:1.5rem;
   --font-500:1.25rem;
-  --font-xl:2.5rem;
+  --font-xl:3rem;
   --theme-base-clr:hsl(253, 25%, 21%);
   --theme-foreground-clr:hsl(253, 25%, 25%)
 }
@@ -37,9 +37,9 @@ a {
   }
 }
 
-.fadeDown{
+.test{
   animation-iteration-count:1;
-  transition-duration: 3s;
+  transition-duration: 2s;
   animation-name:fadeDown;
   animation-duration:1s;
 }
@@ -48,11 +48,11 @@ a {
 
 @keyframes fadeDown {
  0%   {
-   transform: translateY(3rem);
+   transform: translateX(-2rem);
    opacity:0.5
  } 
  100% {
-   transform:translateY(0);
+   transform:translateX(0);
    opacity:1
  }
 }

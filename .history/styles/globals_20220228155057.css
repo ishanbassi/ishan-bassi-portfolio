@@ -37,9 +37,9 @@ a {
   }
 }
 
-.fadeDown{
+.test{
   animation-iteration-count:1;
-  transition-duration: 3s;
+  transition-duration: 2s;
   animation-name:fadeDown;
   animation-duration:1s;
 }
@@ -48,11 +48,11 @@ a {
 
 @keyframes fadeDown {
  0%   {
-   transform: translateY(3rem);
+   transform: translateX(-2rem);
    opacity:0.5
  } 
  100% {
-   transform:translateY(0);
+   transform:translateX(0);
    opacity:1
  }
 }

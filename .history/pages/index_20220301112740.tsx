@@ -17,7 +17,6 @@ import ProjectCarousel from '../components/carousel'
 const Home: NextPage<{markdown:string}> = ({markdown}) => {
   const aboutMeRef = useRef(null)
   const skillsRef = useRef(null)
-  const heroRef = useRef(null)
 
   const IOCallback:IntersectionObserverCallback = (entries,  observer) => {
     const [entry]  = entries
@@ -28,21 +27,19 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
   useEffect(() => {
 
     const observer = new IntersectionObserver(IOCallback,{
-      threshold:.8,
+      threshold:.1,
       root:null
     })
   
-    if(aboutMeRef.current && skillsRef.current && heroRef.current) {
+    if(aboutMeRef.current && skillsRef.current) {
 
       observer.observe(aboutMeRef.current)
       observer.observe(skillsRef.current)
-      observer.observe(heroRef.current)
     }
     return () => {
-      if(aboutMeRef.current && skillsRef.current && heroRef.current){
+      if(aboutMeRef.current && skillsRef.current){
         observer.unobserve(aboutMeRef.current)
         observer.unobserve(skillsRef.current)
-        observer.unobserve(heroRef.current)
       }
 
     }
@@ -60,7 +57,7 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         
       </Head>
       <Container className={styles.container}>
-        <div ref={heroRef}>
+        <div>
           <div className={styles.profileImgCover}> 
             <Image src={ProfileImg} priority className={styles.profileImg} height="180" width="180" alt="profile-pic" ></Image>
           </div>

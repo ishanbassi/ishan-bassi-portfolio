@@ -90,7 +90,7 @@
   font-size:var(--font-xl)
 }
 .socialLinks  > a {
-  color:var(--theme-base-clr);
+  color:black;
   text-decoration: none;
 }
 #fbLink{

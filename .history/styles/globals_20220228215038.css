@@ -37,9 +37,9 @@ a {
   }
 }
 
-.fadeDown{
+.test{
   animation-iteration-count:1;
-  transition-duration: 3s;
+  transition-duration: 2s;
   animation-name:fadeDown;
   animation-duration:1s;
 }
