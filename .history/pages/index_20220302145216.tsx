@@ -68,7 +68,7 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         <title>Ishan Bassi&apos;s Profile</title>
         
       </Head>
-      <Container fluid="md" className={`${styles.container}`}>
+      <Container fluid="md" className={styles.container}>
         <div ref={heroRef}>
           <div className={styles.profileImgCover}> 
             <Image src={ProfileImg} priority className={styles.profileImg} height="180" width="180" alt="profile-pic" ></Image>

@@ -31,14 +31,17 @@ a {
     --font-400:.8rem;
   }
 }
-
+@media only screen and (max-width:768px) {
+  :root{ 
+    --font-500:.7rem;
+  }
+}
 
 .fadeDown{
   animation-iteration-count:1;
   transition-duration: 3s;
   animation-name:fadeDown;
   animation-duration:1s;
-  
 }
 
 
@@ -56,6 +59,5 @@ a {
 
 footer {
   position:relative;
-  margin-top:5rem;
-
+  
 }

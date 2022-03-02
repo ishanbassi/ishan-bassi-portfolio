@@ -114,11 +114,3 @@
   background-color:white;
   mask-image:url(../public/nextjs-logo.svg)
 }
-.footer{
-  position:absolute;
-  width:100%;
-  bottom:0;
-  left:0;
-  background-color:var(--theme-foreground-clr)
-
-}

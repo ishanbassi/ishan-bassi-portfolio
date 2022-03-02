@@ -38,7 +38,7 @@ a {
   transition-duration: 3s;
   animation-name:fadeDown;
   animation-duration:1s;
-  
+  animation-delay:.1s;
 }
 
 

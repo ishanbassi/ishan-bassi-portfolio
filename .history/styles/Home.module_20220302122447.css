@@ -106,19 +106,7 @@
   color:#0e76a8 !important
 }
 
-#nextIconfooter{
-  font-size:var(--font-500);
-  color:white;
-}
 #nextIconfooter::after {
   background-color:white;
   mask-image:url(../public/nextjs-logo.svg)
-}
-.footer{
-  position:absolute;
-  width:100%;
-  bottom:0;
-  left:0;
-  background-color:var(--theme-foreground-clr)
-
 }

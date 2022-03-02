@@ -18,7 +18,6 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
   const skillsRef1 = useRef(null)
   const heroRef = useRef(null)
   const projectRef = useRef(null)
-  const bioParaRef = useRef(null)
 
   const IOCallback:IntersectionObserverCallback = (entries,  observer) => {
     entries.forEach(entry => {
@@ -35,24 +34,20 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
       root:null
     })
   
-    if(aboutMeRef.current && skillsRef1.current && heroRef.current && projectRef.current && bioParaRef.current) {
+    if(aboutMeRef.current && skillsRef1.current && heroRef.current && projectRef.current) {
 
       observer.observe(aboutMeRef.current)
       observer.observe(skillsRef1.current)
       observer.observe(heroRef.current)
       observer.observe(projectRef.current)
-      observer.observe(bioParaRef.current)
     }
     return () => {
-      if(aboutMeRef.current && skillsRef1.current && heroRef.current && projectRef.current && bioParaRef.current){
+      if(aboutMeRef.current && skillsRef1.current && heroRef.current && projectRef.current){
         observer.unobserve(aboutMeRef.current)
         observer.unobserve(skillsRef1.current)
         observer.unobserve(heroRef.current)
         observer.unobserve(projectRef.current)
-        observer.unobserve(bioParaRef.current)
-        
       }
-
 
     }
     
@@ -68,7 +63,7 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         <title>Ishan Bassi&apos;s Profile</title>
         
       </Head>
-      <Container fluid="md" className={`${styles.container}`}>
+      <Container fluid="md" className={styles.container}>
         <div ref={heroRef}>
           <div className={styles.profileImgCover}> 
             <Image src={ProfileImg} priority className={styles.profileImg} height="180" width="180" alt="profile-pic" ></Image>
@@ -121,12 +116,9 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         </div>
       </Container>
       <Container className="mt-5" fluid="md">
-
-        <div ref={bioParaRef}>
-          <p className={styles.bioPara}>
-          <em> Started Programming in 2019, I began my learning with <b>Python</b>, then moved to <b>Javascript</b>. For the past one year I am learning  and doing <b>React.js</b> projects.Currently I am learning <b>Typescript.</b></em>
-          </p>
-        </div>
+        <p className={styles.bioPara}>
+         <em> Started Programming in 2019, I began my learning with <b>Python</b>, then moved to <b>Javascript</b>. For the past one year I am learning  and doing <b>React.js</b> projects.Currently I am learning <b>Typescript.</b></em>
+        </p>
       </Container>
       <Container className="mt-5" fluid="md">
         <div ref={skillsRef1}>
@@ -182,7 +174,6 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         </Row>
         
       </Container>
-
       <Container fluid className="p-0">
         <footer >
           

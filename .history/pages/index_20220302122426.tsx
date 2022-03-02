@@ -18,7 +18,6 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
   const skillsRef1 = useRef(null)
   const heroRef = useRef(null)
   const projectRef = useRef(null)
-  const bioParaRef = useRef(null)
 
   const IOCallback:IntersectionObserverCallback = (entries,  observer) => {
     entries.forEach(entry => {
@@ -35,24 +34,20 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
       root:null
     })
   
-    if(aboutMeRef.current && skillsRef1.current && heroRef.current && projectRef.current && bioParaRef.current) {
+    if(aboutMeRef.current && skillsRef1.current && heroRef.current && projectRef.current) {
 
       observer.observe(aboutMeRef.current)
       observer.observe(skillsRef1.current)
       observer.observe(heroRef.current)
       observer.observe(projectRef.current)
-      observer.observe(bioParaRef.current)
     }
     return () => {
-      if(aboutMeRef.current && skillsRef1.current && heroRef.current && projectRef.current && bioParaRef.current){
+      if(aboutMeRef.current && skillsRef1.current && heroRef.current && projectRef.current){
         observer.unobserve(aboutMeRef.current)
         observer.unobserve(skillsRef1.current)
         observer.unobserve(heroRef.current)
         observer.unobserve(projectRef.current)
-        observer.unobserve(bioParaRef.current)
-        
       }
-
 
     }
     
@@ -68,7 +63,7 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         <title>Ishan Bassi&apos;s Profile</title>
         
       </Head>
-      <Container fluid="md" className={`${styles.container}`}>
+      <Container fluid="md" className={styles.container}>
         <div ref={heroRef}>
           <div className={styles.profileImgCover}> 
             <Image src={ProfileImg} priority className={styles.profileImg} height="180" width="180" alt="profile-pic" ></Image>
@@ -121,40 +116,37 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         </div>
       </Container>
       <Container className="mt-5" fluid="md">
-
-        <div ref={bioParaRef}>
-          <p className={styles.bioPara}>
-          <em> Started Programming in 2019, I began my learning with <b>Python</b>, then moved to <b>Javascript</b>. For the past one year I am learning  and doing <b>React.js</b> projects.Currently I am learning <b>Typescript.</b></em>
-          </p>
-        </div>
+        <p className={styles.bioPara}>
+         <em> Started Programming in 2019, I began my learning with <b>Python</b>, then moved to <b>Javascript</b>. For the past one year I am learning  and doing <b>React.js</b> projects.Currently I am learning <b>Typescript.</b></em>
+        </p>
       </Container>
       <Container className="mt-5" fluid="md">
         <div ref={skillsRef1}>
           <h1>Skills </h1>
-          <p>I can work on the projects which requires role of full    developer or UI developer.</p>
+          <p>I can work on the projects which requires role of full stack developer or UI developer.</p>
           <Row className='mt-3'>
-            <Col  className="mb-5" md="5">
+            <Col md="5">
               <div className={`${styles.skillsImg} ${styles.baseShadow}`}>
                 <Image  src={fullStack} alt="full stack" layout='fill'   placeholder="blur" sizes="50vw" objectFit="fill"/> 
                 
               </div>
               <h4>Full Stack Development</h4>
             </Col>
-            <Col className="mb-5" md={{offset:2 , span:5}}>
+            <Col md={{offset:2 , span:5}}>
               <div className={`${styles.skillsImg} ${styles.baseShadow}`}>
                 <Image  src={seo} alt="seo support" layout='fill'   placeholder="blur" sizes="50vw"  objectFit="fill"/>
                 
               </div>
               <h4>SEO Support</h4>
             </Col>
-            <Col className="mb-5" md={5}>
+            <Col className="mt-5" md={5}>
               <div className={`${styles.skillsImg} ${styles.baseShadow}`}>
                 <Image  src={ui} alt=" UI development" layout='fill'   placeholder="blur" sizes="50vw"  objectFit="fill" />
                 
               </div>
               <h4>UI Development</h4>
             </Col>
-            <Col className="mb-5" md={{offset:2 , span:5}}>
+            <Col className="mt-5" md={{offset:2 , span:5}}>
               <div className={`${styles.skillsImg} ${styles.baseShadow}`}>
                 <Image  src={spa} alt="single page applications" layout='fill'   placeholder="blur"   objectFit="fill" sizes='50vw'/>
                 
@@ -182,13 +174,9 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         </Row>
         
       </Container>
-
-      <Container fluid className="p-0">
-        <footer >
-          
-          <div className={`${styles.footer} pt-4 pb-2`}>
-            <p>This site is created using <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className={styles.frameworkIcons} id={styles.nextIconfooter}>Next.js</a> </p>
-          </div>
+      <Container fluid="md">
+        <footer>
+          <p>Created this site using <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className={styles.frameworkIcons} id={styles.nextIconfooter}>Next.js</a> </p>
         </footer>
       </Container>
       
