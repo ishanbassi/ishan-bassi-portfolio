@@ -68,11 +68,11 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"/>
         <link rel="icon"  href='../public/favicon-32.png' >`</link> 
-        
         <title>Ishan Bassi&apos;s Profile</title>
         
       </Head>
       <Container fluid="md" className={`${styles.container}`}>
+
         <div ref={heroRef}>
         <Script src="https://kit.fontawesome.com/7991078b1d.js" crossOrigin="anonymous" strategy='lazyOnload'></Script>
           <div className={styles.profileImgCover}> 
