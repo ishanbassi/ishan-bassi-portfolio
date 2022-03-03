@@ -11,6 +11,8 @@ import ui from '../public/ui.jpg'
 import spa from '../public/single-page-apps.jpg'
 import ProjectCarousel from '../components/carousel'
 import Script from 'next/script'
+import Markdown from 'markdown-to-jsx'
+import {readMD} from '../lib/fs-data'
 
 const Home: NextPage<{markdown:string}> = ({markdown}) => {
   const aboutMeRef = useRef(null)
@@ -82,7 +84,6 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
   
       <Container fluid="md" className="mt-5" >
         <div className={`${styles.bio} ${styles.baseShadow} `} ref={aboutMeRef} >
-    
           <ul>
             <li>
               <b className={styles.bioHeads}>Name :</b>
@@ -184,7 +185,9 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         </Row>
         
       </Container>
-    
+      <Container>
+        <Markdown>{markdown}</Markdown>
+      </Container>
       <Container fluid className="p-0">
         <footer >
           
@@ -198,5 +201,13 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
   )
     
 }
-
+export async function getStaticProps() {
+  
+  const markdown = await readMD('about-me.md')
+  return{
+    props:{
+      markdown
+    }
+  }
+}
 export default Home

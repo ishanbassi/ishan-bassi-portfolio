@@ -82,7 +82,6 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
   
       <Container fluid="md" className="mt-5" >
         <div className={`${styles.bio} ${styles.baseShadow} `} ref={aboutMeRef} >
-    
           <ul>
             <li>
               <b className={styles.bioHeads}>Name :</b>
@@ -184,7 +183,7 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         </Row>
         
       </Container>
-    
+
       <Container fluid className="p-0">
         <footer >
           
@@ -198,5 +197,19 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
   )
     
 }
-
+// export async function getStaticProps() {
+//   let HomePageMD;
+//   try{
+//     HomePageMD = await fsPromises.readFile('markdown/home-page.md' , 'utf8')
+//   }catch(err) {
+//     console.error('no file present ')
+    
+//   }
+    
+//   return{
+//     props:{
+//       markdown:HomePageMD
+//     }
+//   }
+// }
 export default Home

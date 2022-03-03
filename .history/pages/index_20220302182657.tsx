@@ -8,7 +8,7 @@ import ProfileImg from '../public/getProfileImage.jpg'
 import fullStack from '../public/fullStack.jpg'
 import seo from '../public/seo.jpg'
 import ui from '../public/ui.jpg'
-import spa from '../public/single-page-apps.jpg'
+import spa from '../public/spa.jpg'
 import ProjectCarousel from '../components/carousel'
 import Script from 'next/script'
 
@@ -64,7 +64,7 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"/>
-   
+        
         <title>Ishan Bassi&apos;s Profile</title>
         
       </Head>
@@ -82,7 +82,6 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
   
       <Container fluid="md" className="mt-5" >
         <div className={`${styles.bio} ${styles.baseShadow} `} ref={aboutMeRef} >
-    
           <ul>
             <li>
               <b className={styles.bioHeads}>Name :</b>
@@ -184,7 +183,7 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
         </Row>
         
       </Container>
-    
+
       <Container fluid className="p-0">
         <footer >
           
@@ -198,5 +197,19 @@ const Home: NextPage<{markdown:string}> = ({markdown}) => {
   )
     
 }
-
+// export async function getStaticProps() {
+//   let HomePageMD;
+//   try{
+//     HomePageMD = await fsPromises.readFile('markdown/home-page.md' , 'utf8')
+//   }catch(err) {
+//     console.error('no file present ')
+    
+//   }
+    
+//   return{
+//     props:{
+//       markdown:HomePageMD
+//     }
+//   }
+// }
 export default Home
